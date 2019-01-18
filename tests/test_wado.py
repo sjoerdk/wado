@@ -174,26 +174,6 @@ class TestWadoConnection(unittest.TestCase):
             "C:/temp",
         )
 
-    def test_download_file(self):
-        """Download a dicom file as WADO resource
-
-        """
-        # return dicom object when you call this url
-        file_content = b"-Some bytes that actually should be dicom-"
-        self.connection_manager.set_response(
-            "http://testWADO.com/download/?fileID=1",
-            get_mock_response_wado_object(file_content),
-        )
-
-        # call the url to download
-        self.connection.download_image(
-            "http://testWADO.com/download/?fileID=1", "C:/temp"
-        )
-
-        # The content that was returned should have been written to file
-        content = self.open_file_manager.opened["C:/temp\\testfilename.dcm"].getvalue()
-        self.assertEqual(content, file_content)
-
     def test_host_not_found(self):
         """If the server is offline or non-existant: informative error
 
@@ -201,7 +181,7 @@ class TestWadoConnection(unittest.TestCase):
         """
 
         def failing_call(_, timeout):
-            raise urllib.error.URLError("Terrible problems! #OMG #getalife")
+            raise urllib.error.URLError("Terrible problems!")
 
         self.connection_manager.open = failing_call
 
