@@ -13,7 +13,8 @@ wado
         :target: https://wado.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/ambv/black
 
 
 DICOM WADO file download
@@ -26,7 +27,12 @@ DICOM WADO file download
 Features
 --------
 
-* TODO
+* Download DICOM files via http with the WADO protocol
+
+Disclaimers
+-----------
+* Has only been tested live on AGFA Enterprise Imaging VNA 8. Different servers might have slightly different implementations of the WADO protocol.
+* WADO only. Does not support DICOM C-ECHO, C-STORE etc.. For other protocols see the excellent `pynetdicom lib <https://pypi.org/project/pynetdicom/>`_
 
 Credits
 -------
