@@ -31,7 +31,8 @@ Features
 
 Disclaimers
 -----------
-* Has only been tested live on AGFA Enterprise Imaging VNA 8. Different servers might have slightly different implementations of the WADO protocol.
+* Has only been tested live on AGFA Enterprise Imaging VNA 8. Different servers might have slightly different implementations of the WADO protocol. If you are working with a different pacs, please consider (see section :ref:`Contributing` ).
+
 * WADO only. Does not support DICOM C-ECHO, C-STORE etc.. For other protocols see the excellent `pynetdicom lib <https://pypi.org/project/pynetdicom/>`_
 
 Credits
