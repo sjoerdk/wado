@@ -2,6 +2,11 @@
 wado
 ====
 
+‌:warning: Deprecated - use dicomtrolley :warning:‌
+===================================================
+
+This module is deprecated. Please use https://github.com/sjoerdk/dicomtrolley for interacting with a WADO server.
+
 
 .. image:: https://img.shields.io/pypi/v/wado.svg
         :target: https://pypi.python.org/pypi/wado

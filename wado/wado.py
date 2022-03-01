@@ -21,6 +21,10 @@ import urllib.request
 import urllib.parse
 import urllib.error
 
+import warnings
+warnings.warn("this module is deprecated. Please use sjoerdk/dicomtrolley instead", DeprecationWarning,
+              stacklevel=2)
+
 try:
     import cookielib
 except ImportError:
